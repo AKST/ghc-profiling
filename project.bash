@@ -1,3 +1,24 @@
+main() {
+  if [ -z $1 ]; then
+    >&2 echo -e "You need specify a command"
+    project_help
+    exit 1
+  fi
+
+  case $1 in
+    init) install_deps ;;
+    help) project_help ;;
+    *)    project_help ;;
+  esac
+}
+
+project_help() {
+  echo
+  echo "  HELP    provides help"
+  echo "  INIT    downloads depenencies"
+  echo
+}
+
 install_deps() {
   install_cabal
   install_projects
@@ -70,4 +91,4 @@ install_ghc() {
 }
 
 
-install_deps
+main $@
