@@ -9,7 +9,6 @@ boot to the following `precise32` image
 
 ```
 vagrant box add precise32 http://files.vagrantup.com/precise32.box
-vagrant init precise32
 vagrant up
 ```
 
