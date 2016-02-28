@@ -1,5 +1,8 @@
+.vagrant
+
 bins
 tmp
 example-projects
 
 .envrc
+
